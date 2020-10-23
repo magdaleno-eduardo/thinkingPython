@@ -69,7 +69,34 @@ def average_testScoreV2():
     else:
         print("No grades were entered.")
 
+def average_testScoresV3():
+    total = 0
+    gradecounter = 0
+
+    # process phase
+
+    while 1:
+        grade = input("Enter grade, -1 to end: ")
+        grade = int(grade)
+
+        #exit loop if user inputs -1
+        if grade == -1:
+            break
+
+        total += grade
+        gradecounter += 1
+
+    # termination phase
+    if gradecounter != 0:
+        average = float(total) / gradecounter
+        print("Class average is ", average)
+    else:
+        print("No grades were entered.")
+
+
+
 
 # test()
 # average_testScore()
-average_testScoreV2()
+#average_testScoreV2()
+average_testScoresV3()
